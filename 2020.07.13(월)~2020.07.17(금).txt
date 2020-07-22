@@ -1,0 +1,120 @@
+2020.07.13(월)
+- 
+오후수업(HTML)
+- 2장~8장
+- 1번 2장 text 3장 텍스트에 관련된 여러가지 요소 속성을 비롯 태그(들여쓰기, 첫글자만 꾸며주는 것들도 있었다. 주로쓰는 태그로나옴)
+- 2번 p68 ul li태그 사용하는 불릿기호 바꾸는법 스타일 바꾸기
+- 3번 테이블 문제 테이블 형태 구성 (콜스판, 로0우 스판 테두리 주는 방식 보더 콜렙스가 나올 확율이 높다. border를 hidden으로)
+colgroup col 태그 사용도 나올듯
+- 4번 폼하나 p147 레이블과 인풋을 묶어 페스워드 힌트주는 placehleder 힌트,오토 포커싱, 체크박스, 라디오, 셀렉트, 전송버튼 
+- 5번 배치문제 float:letf, clear:both 등등 필요에 따라 포지션을 사용할 수도
+
+2020.07.14(화)
+오전수업(JSP)
+*DB부문
+- PRYMARY KEY(unique, notnull 가 자동으로 들어간다.)
+- VARCHAR2(Oracle에만 있다.)
+- char, varchar 차이(var이 붙으면 동적 할당.)
+- 00이 들어가면 자릿수가 변화하기 때문에 주민등록번호, 전화번호 등은 
+  무조건 문자열로 저장해야 한다(정확히 숫자에 0까지 저장해야 하는 경우)
+- NUMBER(10,2)정수 10자리 소수점 두자리 까지라는 뜻(콤마를 없애면 소수점 없는 정수)
+- DB 쿼리:
+CREATE TABLE t_student (
+    i_student NUMBER, 
+    nm VARCHAR2(15) NOT NULL,
+    age NUMBER(3) NOT NULL,
+    PRIMARY KEY(i_student)
+);
+----------------------------------------
+INSERT INTO t_student
+(i_student, nm, age)
+VALUES
+(1, '권하균', 20);
+----------------------------------------
+
+INSERT INTO t_student
+(i_student, nm, age)
+VALUES
+(2, '권하균', 20);
+----------------------------------------
+UPDATE t_student
+SET nm = '김도빈'
+,age = 21
+WHERE i_student = 2;
+-----------------------------------------
+INSERT INTO t_student
+(i_student, nm, age)
+VALUES
+(3, '권하균', 20);
+-----------------------------------------
+DELETE FROM t_student
+WHERE i_student=3;
+-----------------------------------------
+SELECT i_student, nm, age FROM t_student;
+(컬럼명을 *로 해도 되지만 자바에서 작성할때는 왠만하면 컬럼명을 다 적도록 하자실수를 줄이기 위해)
+-----------------------------------------
+
+UPDATE t_student
+SET nm = '김수인'
+,age = 22
+WHERE i_student = 3;
+----------------------------------------
+UPDATE t_student
+SET nm = '김시운'
+,age = 23
+WHERE i_student = 4;
+-----------------------------------------
+UPDATE t_student
+SET nm = '김은정'
+,age = 24
+WHERE i_student = 5;
+-----------------------------------------
+SELECT i_student, nm, age
+FROM t_student
+WHERE i_student <= 3 AND age =21
+ORDER BY i_student DESC;
+-----------------------------------------
+SELECT i_student, nm, age
+FROM t_student
+WHERE i_student =5 OR age =21
+ORDER BY i_student DESC;
+-----------------------------------------
+
+2020.07.15(수)
+- primary key는 두개이상일때는 무조건 밑에 함수로 줄수밖에 없다.(하나일 경우에는 선언문 옆에 적을수 있다.)
+- CREATE, DELETE등은 ROLLBACK이 되지않는다.(데이터와 관련된 것만 롤백이 가능)
+- INSERT문에서 컬럼명은 무조건 넣어주도록 하자(혹시 모를 오류를 예방하기위함)
+- 1테이블의 1개의 값-> 스칼라값 이라고 한다.
+- 널값을 찾을때는 i_student = null;이 아니라 is null 예약어를 사용한다.
+- substr(first_name, 4, 2) (first_name 값의 4번째 부터 2글자를 가져온다.)
+- 자주쓰는 문자열 함수들 LPAD, RPAD, SUBSTR, LTRIM, RTRIM, TRIM, LENGTH, CONCAT오후 1:33 2020-07-15
+
+오후수업(JavaScript)
+- 보통 변수 선언등은 head안에 선언문을 넣어주고, 실행 부문은 body안에 넣어준다.
+-
+
+2020.07.16(목)
+오후수업(JavaScript)
+- typeof연선자 : 데이터 타입을 확인할 수 있는 연산자
+(기본형 : typeof 변수 또는 데이터)
+- 자바스크립트에서는 사용자 정의 클래스안의 함수를 메소드로 부른다.
+(일반적으로 정의된 객체안의 메소드는 함수로 부른다.)
+
+2020.07.17(금)
+오전수업(DB)
+- 실수 함수 :
+ceil(내림), floor(올림), round(반올림), trunc(값, 자릿수)(소수점이하의 수를 자릿수 만큼만 나타내는 함수)
+- having은 group by에 대한 조건을 넣어줄때 사용하는 명령어.
+- 그룹함수 :
+max(), min(), avg(), sum(), decode(컬럼명, '컬럼값', 치환할 값')
+- CASE 문
+CASE 컬럼명 WHEN 조건(비교식도 가능) THEN 나타낼값 END(CASE문의 끝)
+(WHEN과 THEN은 몇개가 들어가도 상관없다. ELSE도 옵션 안넣어도 된다.)
+- WHERE절은 항상 GROUP BY 위에 정의해야한다.
+- HAVING은 GROUP BY밑에 있어야한다.
+- ODER BY는 마지막이다.
+
+오후수업(JavaScript)
+- 
+
+
