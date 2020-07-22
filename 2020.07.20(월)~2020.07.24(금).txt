@@ -134,3 +134,5 @@ DROP INDEX idx_student_age;
 SELECT * FROM user_tables;
 SELECT * FROM user_indexes;
 SELECT * FROM user_views;
+
+
