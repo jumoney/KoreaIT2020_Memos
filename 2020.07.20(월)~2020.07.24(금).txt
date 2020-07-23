@@ -135,4 +135,21 @@ SELECT * FROM user_tables;
 SELECT * FROM user_indexes;
 SELECT * FROM user_views;
 
+2020.07.23(목)
+오전수업(JSP)
+- application객체 : 서버가 키면 1개(전체에서 1개가 만들어진다.)가 만들어지고 서버가 꺼지면 죽는다(라이프사이클)
+- session : 브라우저가 꺼져야만 죽는다.(개인용 사용자 별로 1개 씩)
+- request : 다른 페이지로 정보를 전달한 후 죽는다.
+- <%!, %> : 전역으로 선언 할때 사용한다.
 
+오후수업(JavaScript)
+- for-each문의 자바와 자바스크립트 차이
+JAVA
+
+for-each, for-in, 확장 for문, 향상된 for문
+
+for(int i : score) {
+	System.out.print(i + " ");
+}
+
+- https://developer.mozilla.org/(개발자 참고 사이트)
