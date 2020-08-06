@@ -8,3 +8,27 @@
 - jsp뷰 담당 servlet 로직담당
 - response.sendRedirect()는 주소창에 엔터를 치는것과 같다.(request, response도 안살려보내고 주소도 바뀌면서 이동한다.)
 - request.Disphather()를 사용하도록 하자(주소-값도 안바뀜, request, response도 살려보낼 수 있다.)
+
+2020.08.05(수)
+오전수업(JSP)
+- sendRedirect()는 무조건 get방식으로 날린다. 이에 반해 Disphather()메소드는 doget()은 get방식 doPost()는 post방식으로 
+날아간다.
+- doget()은 get방식 doPost()는 post방식으로 날아간다.(sendRedirect()는 어디에 넣어도 get으로 날아간다.)
+- session: 브라우저 마다 1개 씩 소멸은 browser을 종료하는 시점.(sessioin, request, respone 는 개인용이다.)
+- application: 서버용 객체 1개 밖에 없다 서버당 하나.
+- OAUTH 2.0
+
+오후수업(JavaScript)
+- UI구현 시험정보
+* 시험일시: 2020-08-14(금)
+* 문항수: 3~5문제
+* 3문제 : JavaScript 2문제 JQuery 1문제
+* 5문제 :	JavaScript 3~4문제 JQuery 1~2문제
+* html, css 도 어느정도 나온다.
+
+2020.08.06(목)
+오전수업(JSP)
+- 
+
+오후수업(Javascript)
+- cdnjs (제이쿼리 네트워크에서 받아오는 사이트)
