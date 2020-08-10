@@ -1,0 +1,7 @@
+2020.08.10(월)
+오전수업(JSP)
+- SELECT쿼리문을 제외한 나머지(DELETE, INSERT문 등등...)는 ResultSet객체가 필요없다.
+- SEQUENCE는 Oracle에만 있다.
+- DB쿼리:
+CREATE SEQUENCE seq_board 
+START WITH 14; //14는 최대 i_board값+1이다. 시퀀스를 어디부터 시작할지)
