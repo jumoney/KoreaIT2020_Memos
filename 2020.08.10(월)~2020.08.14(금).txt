@@ -5,3 +5,23 @@
 - DB쿼리:
 CREATE SEQUENCE seq_board 
 START WITH 14; //14는 최대 i_board값+1이다. 시퀀스를 어디부터 시작할지)
+
+2020.08.11(화)
+오후수업(JavaScript/JQuery)
+
+* javascript: 3문제(30, 30, 20점식):
+- chex dom 파일들 과 같은 형식으로 나옴(잘 봐둬라)
+	객체 생성자 함수를 이용해서 객체를 만드는 문제 (1번)
+
+- 여행자 물품 추가하는 문제(변형)
+	폼을 기억할것
+
+- 도서목록 만드는거 기억해둘것.
+
+* JQuery 2문제(10점식):
+범위내에 함수들을 사용하는 문제
+html함수, 
+text,
+css,
+attr,
+event를 다루는 함수들
