@@ -1,0 +1,44 @@
+2020.08.24(월)
+- 
+기사
+
+-----
+
+PMP
+감리사**(감사/감리)
+기술사
+
+JUnit 우리가 만든 걸 테스트하는 프로그램을 만드는 것!!!
+
+데이터베이스 설계~
+
+kosa
+
+유스케이스
+
+---------------------------시험관련-----------------------------------
+순번 : 1 
+시스템 : 도서
+기능 : 도서검색
+설명: 원하는 도서를 검색할 수 있다
+엔티티: 도서테이블
+입력: 도서명
+출력: 도서번호, 도서명, 저자, 발행일자, 출판사
+입력항목설정: 도서명
+출력항목설정: 1. 도서정보는 Array로 출력 2. errorcode
+
+
+--------------------------DB쿼리-------------------------------------
+CREATE SEQUENCE seq_userloginhistory
+nocache;
+
+CREATE TABLE t_user_loginhistory(
+i_history number primary key,
+i_user number not null,
+ip_addr varchar2(15) not null,
+os varchar2(5) not null,
+browser varchar2(10) not null,
+r_dt date default sysdate
+);
+
+
