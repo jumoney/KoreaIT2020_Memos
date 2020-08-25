@@ -41,4 +41,8 @@ browser varchar2(10) not null,
 r_dt date default sysdate
 );
 
-
+2020-08-25(화)
+- 머티리얼 아이콘, 폰트어썸
+- name: Oracle
+-tomcat port: 8005
+- http/1.1:- 8089
