@@ -46,3 +46,6 @@ r_dt date default sysdate
 - name: Oracle
 -tomcat port: 8005
 - http/1.1:- 8089
+
+2020-08-26(수)
+내용과 글쓴이 이름과 글쓴날짜
