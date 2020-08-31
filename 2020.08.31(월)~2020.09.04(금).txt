@@ -1,0 +1,3 @@
+2020.08.31(월)
+- String savePath = getServletContext().getRealPath("img");
+(톰켓의 어디에 있든 저 메소드가 절대 경로를 리턴해준다.)
