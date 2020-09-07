@@ -1,0 +1,25 @@
+2020.09.07(월)
+
+식당 리뷰할 수 있는 서비스
+(사진도 올릴 수 있고)
+
+서블릿 1개 - 분기시켜주는 객체(HandlerMapping)
+
+- 컨트롤러(기존에 만들던 서블릿) - 서비스 (로직) - DAO
+
+http://localhost:8099/(컨트롤러 구분)/(호출할 메소드 구분)
+
+-DB쿼리
+CREATE TABLE t_user(
+	i_user INT unsigned PRIMARY KEY AUTO_INCREMENT,
+	user_id nvarchar(30) NOT NULL UNIQUE,
+	user_pw nvarchar(70) NOT NULL,
+	salt VARCHAR(30) NOT NULL,
+	nm nvarchar(5) NOT NULL,
+	profile_img VARCHAR(50),
+	r_dt DATETIME DEFAULT NOW(),
+	m_dt DATETIME DEFAULT NOW()
+	)
+	
+	
+mysql은 nvar캐릭터가 없다.
