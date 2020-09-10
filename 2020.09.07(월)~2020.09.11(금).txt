@@ -23,3 +23,5 @@ CREATE TABLE t_user(
 	
 	
 mysql은 nvar캐릭터가 없다.
+
+2020.09.10(목)
