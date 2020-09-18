@@ -9,7 +9,8 @@
 
 http://localhost:8099/(컨트롤러 구분)/(호출할 메소드 구분)
 
--DB쿼리
+--------------------------------DB쿼리------------------------------
+
 CREATE TABLE t_user(
 	i_user INT unsigned PRIMARY KEY AUTO_INCREMENT,
 	user_id nvarchar(30) NOT NULL UNIQUE,
@@ -19,9 +20,64 @@ CREATE TABLE t_user(
 	profile_img VARCHAR(50),
 	r_dt DATETIME DEFAULT NOW(),
 	m_dt DATETIME DEFAULT NOW()
-	)
-	
+);
+
+---------------------------------------------------------------------	
 	
 mysql은 nvar캐릭터가 없다.
 
 2020.09.10(목)
+
+2020.09.11(금)
+
+------------------------------ DB 쿼리문 --------------------------
+
+CREATE TABLE t_restaurant_menu (
+	i_rest INT UNSIGNED,
+	seq INT UNSIGNED,
+	menu_pic VARCHAR(50),
+	PRIMARY KEY(i_rest, seq),
+	FOREIGN KEY(i_rest) REFERENCES t_restaurant(i_rest)
+);
+
+CREATE TABLE t_restaurant_recommend_menu (
+	i_rest INT UNSIGNED,
+	seq INT UNSIGNED,
+	menu_nm VARCHAR(20) NOT NULL,
+	menu_price INT UNSIGNED NOT NULL,
+	menu_pic VARCHAR(50),
+	PRIMARY KEY(i_rest, seq),
+	FOREIGN KEY(i_rest) REFERENCES t_restaurant(i_rest)
+);
+
+
+CREATE TABLE t_restaurant(
+	i_rest INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	nm VARCHAR(20) NOT NULL,
+	addr VARCHAR(100) NOT NULL,
+	lat DOUBLE UNSIGNED NOT NULL,
+	lng DOUBLE UNSIGNED NOT NULL,
+	cd_category INT UNSIGNED NOT NULL,
+	i_user INT UNSIGNED NOT NULL COMMENT '등록자',
+	r_dt DATETIME DEFAULT NOW(),
+	m_dt DATETIME DEFAULT NOW(),
+	FOREIGN KEY (i_user) REFERENCES t_user(i_user)
+);
+
+CREATE TABLE c_code_m(
+	i_m INT UNSIGNED PRIMARY KEY,
+	`desc` VARCHAR(30) DEFAULT '',
+	cd_nm VARCHAR(10) DEFAULT ''
+);
+
+CREATE TABLE c_code_d(
+	i_m INT UNSIGNED,
+	cd INT UNSIGNED,
+	val VARCHAR(15) NOT NULL,
+	PRIMARY KEY(i_m, cd),
+	FOREIGN KEY(i_m) REFERENCES c_code_m(i_m)c_code_dc_code_d
+);
+
+--------------------------------------------------------------------------------
+
+	

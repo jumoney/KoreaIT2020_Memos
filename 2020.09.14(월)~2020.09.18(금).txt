@@ -1,0 +1,44 @@
+2020.09.14(월)
+- 
+ String sql = " SELECT seq, menu_nm, menu_price, menu_pic"
+		 		+ " FROM t_restaurant_recommend_menu"
+		 		+ " WHERE i_rest = ?";
+
+2020.09.17(목)
+- 프레임워크
+Plian Old Java Object (POJO)
+
+Bean등록!!! 생성은 컨테이너(스프링)이 직접 생성하구요. 우리는 관여X
+
+IoC (Inversion of Control) : 제어의 역행 
+(객체 생성을 컨테이너 맡긴다)
+
+DI (Dependency Injection : 의존성 주입
+
+AOP (Aspect Oriented Programming)
+
+-Factory가 들어간 클래스는 객체를 생성해주는 공장 같은 개념으로 생각하면 된다.
+
+2020.09.18(금)
+- 네이밍 규칙
+
+동사 앞, 명사 뒤
+
+클래스명 파스칼, 메소드명, 변수명(DB 관련X) 
+카멜 케이스 기법 사용
+사용자 정의 메소드명 앞에는 _(언더바)를 붙인다.
+VO 변수명 단어 구분은 _(언더바)
+
+MODEL
+DMI(Domain) - select 결과용
+DTO - select parameter 용
+VO - insert, update, delete 용
+
+CRUD
+(Java, DB)
+ins
+sel_ / sel__List
+upd
+del 
+
+---------------------
